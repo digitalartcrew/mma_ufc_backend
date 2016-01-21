@@ -1,6 +1,5 @@
 require('dotenv').load();
 
-var mongoose = require('mongoose'),
 express = require('express'),
 request = require('request'),
 cors = require('cors'),
@@ -99,6 +98,4 @@ app.get('/fitness', function(req,res){
 });
 
 
-app.listen(3001,function(req,res){
-	console.log("App running on localhost 3001");
-});
+app.listen(process.env.PORT || 3000);
